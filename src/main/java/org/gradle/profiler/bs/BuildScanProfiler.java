@@ -18,7 +18,7 @@ import java.util.stream.Stream;
 
 public class BuildScanProfiler extends Profiler {
 
-    public final static String VERSION = "1.11";
+    public final static String VERSION = "2.0";
 
     private final String buildScanVersion;
 
@@ -106,7 +106,7 @@ public class BuildScanProfiler extends Profiler {
             @Override
             public void calculateGradleArgs(List<String> gradleArgs) {
                 System.out.println("Using build scan profiler version " + buildScanVersion);
-                gradleArgs.add("-Dscan");
+                gradleArgs.add("--scan");
             }
         };
     }
