@@ -141,6 +141,7 @@ Add the `--profile chrome-trace` option and open the result in Google Chrome. It
 ## Command line options
 
 - `--project-dir`: Directory containing the build to run (required).
+- `--gradle-user-home`: Gradle user home directory. Defaults to the `GRADLE_USER_HOME` environment variable or `$USER_HOME/.gradle` if not set.
 - `--benchmark`: Benchmark the build. Runs the builds more times and writes the results to a CSV file.
 - `--profile <profiler>`: Profile the build using the specified profiler. See above for details on each profiler.
 - `--gradle-version <version>`: Specifies a Gradle version or installation to use to run the builds, overriding the default for the build. You can specify multiple versions.
