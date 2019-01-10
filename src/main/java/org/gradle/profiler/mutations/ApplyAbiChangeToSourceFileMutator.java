@@ -14,6 +14,8 @@ public class ApplyAbiChangeToSourceFileMutator extends AbstractDelegateFileMutat
             return new ApplyAbiChangeToKotlinSourceFileMutator(sourceFile);
         } else if (sourceFile.getName().endsWith(".java")) {
             return new ApplyAbiChangeToJavaSourceFileMutator(sourceFile);
+        } else if (sourceFile.getName().endsWith(".ts")) {
+            return new ApplyChangeToTsSourceFileMutator(sourceFile);
         } else {
             throw new IllegalArgumentException("Can only modify Java or Kotlin source files");
         }
